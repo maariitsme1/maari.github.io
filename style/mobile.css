@@ -2,68 +2,109 @@
   padding: 0;
   margin: 0;
 }
+.bar{
+  height: 40px;
+  background-color: #063146;
+}
 .mobilehide{
  visibility: visible;
+ /* display: inline; */
 }
 header>nav{
   height: 100vh;
-  width: 40vw;
+  width: 50vw;
   min-width: 100px;
   background-color: #042331;
- 
+ box-shadow:4px 1px 3px rgb(114, 112, 112) ;
   overflow: hidden;
-  /* left: -40vw; */
+  left: -100%;
   position: fixed;
+  top:0;
+  transition: .5s linear;
   /* left: 0; */
 }
 nav>h3{
   color: aliceblue;
   text-align: center;
+  /* display: block; */
   font-size: 6vw;
   font-size-adjust: inherit;
   padding: 6%;
   background-color: #063146;
   line-height: 70px;
 }
-.menu{
-  
-  box-sizing: border-box;
-  border-radius: 0.5rem;
-  padding: 0 2px 0 2px;
-  font-size: 5vw;
-  line-height: normal;
-  width: 5vw;
-  overflow: hidden;
-  background-color: aqua;
+nav>ul{
+  display: block;
 }
+nav>ul>li{
+  padding: 15% 0 5% 8%;
+  /* background-color: chartreuse; */
+  display: block;
+  
+  border-top: 1px solid  rgba(255,255,255,.1);;
+  margin-bottom: 5px;
+  align-items: center;
 
-nav ul a{
+}
+nav ul li a{
   display: block;
   text-decoration: none;
   color: aliceblue;
-  padding: 2vw;
+  height: 100%;
+ 
+ 
   display: block;
-  text-align: center;
+  /* margin-left:10px ; */
+  text-align: justify;
+  /* width: auto; */
   box-sizing: border-box;
-  /* background-color: aqua; */
-  
-  border-top: 1px solid rgba(255,255,255,.1);
-  /* margin-top: 10px; */
+  /* background-color: rgb(202, 200, 72); */
   margin-bottom: 10px;
+  transition: .5s;
 }
-header>nav>ul>li>a>i{
- font-size: 20px;
- margin-left: -3vw;
- margin-right: 3vw;
+li>a>i{
+  margin-right: 5px;
+  /* color: aliceblue; */
+}
+.menu,.cross{
+  cursor: pointer;
+}
+.menu{
+  position: absolute;
+  top: 8px;
+  font-size: 30px;
+  left: 5px;
+  color: aliceblue;
+
 
 }
-header>nav>ul>li:hover a{
-  padding-left: 10px;
+.cross{
+  position: absolute;
+  top:10px;
+  left: -40vw;
+  color: aliceblue;
+  z-index: 111;
+  font-size: 20px;
+  /* visibility: hidden; */
+  transition: .7s;
+
+}
+nav>ul>li:hover{
   background-color: aqua;
-  color: black;
-  transform: scale(1.05);
-
 }
-#toggle:checked ~nav{
+nav>ul>li:hover a{
+  padding-left: 10%;
+  transform: scale(1.05);
+  color: black;
+  
+}
+#toggle{
+  display: none;
+}
+#toggle:checked  ~ nav{
   left: 0;
+}
+
+#toggle:checked  ~ label > .cross{
+ left: 40vw;
 }
