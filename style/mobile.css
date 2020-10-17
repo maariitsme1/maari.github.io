@@ -5,6 +5,7 @@
 .bar{
   height: 40px;
   background-color: #063146;
+  box-shadow: 1px 6px 5px grey;
 }
 .mobilehide{
  visibility: visible;

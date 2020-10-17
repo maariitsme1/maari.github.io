@@ -1,4 +1,8 @@
-.mobilehide{
-    /* visibility: hidden; */
-    display: none;
-  }
+main{
+  margin-top: 9px;
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
