@@ -20,7 +20,9 @@ header>nav{
   overflow: hidden;
   left: -100%;
   position: fixed;
+  /* z-index: -2; */
   top:0;
+  
   transition: .5s linear;
   /* left: 0; */
 }
@@ -108,4 +110,15 @@ nav>ul>li:hover a{
 
 #toggle:checked  ~ label > .cross{
  left: 40vw;
+}
+main{
+  /* top: 41px; */
+}
+.contact-cards{
+  display: block;
+}
+.card{
+  /* display:flex; */
+  margin: 10px auto;
+
 }
