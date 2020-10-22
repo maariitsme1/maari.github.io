@@ -111,9 +111,7 @@ nav>ul>li:hover a{
 #toggle:checked  ~ label > .cross{
  left: 40vw;
 }
-main{
-  /* top: 41px; */
-}
+
 .contact-cards{
   display: block;
 }
